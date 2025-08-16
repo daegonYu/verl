@@ -27,7 +27,7 @@ from tqdm.auto import tqdm
 from verl.utils.fs import copy, makedirs
 
 
-def generate_sft_dataset(target_hdfs_path_dir, local_dir="~/data/full_hh_rlh/sft"):
+def generate_sft_dataset(target_hdfs_path_dir, local_dir="./data/full_hh_rlh/sft"):
     dataset = load_dataset("Dahoas/full-hh-rlhf")
     output = {"prompt": [], "response": []}
     for data in tqdm(dataset["train"]):
